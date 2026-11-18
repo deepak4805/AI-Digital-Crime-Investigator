@@ -1,0 +1,120 @@
+from datetime import datetime
+
+
+def generate_report():
+    report = f"""
+============================================================
+              DIGITAL CRIME INVESTIGATION REPORT
+============================================================
+
+Report Generated: {datetime.now().strftime("%d/%m/%Y %H:%M")}
+
+------------------------------------------------------------
+1. CASE SUMMARY
+------------------------------------------------------------
+
+This case contains evidence of a suspected online fraud/scam.
+The collected evidence includes suspicious messages, a
+financial demand, and an associated phone contact.
+
+------------------------------------------------------------
+2. CHRONOLOGICAL TIMELINE
+------------------------------------------------------------
+
+08/08/2026 - 10:30
+Event: Victim received a suspicious KYC message.
+
+08/08/2026 - 10:35
+Event: Sender requested ₹5000.
+
+08/08/2026 - 10:40
+Event: Victim contacted the provided phone number.
+
+------------------------------------------------------------
+3. EXTRACTED EVIDENCE
+------------------------------------------------------------
+
+Financial Amount:
+₹5000
+
+Evidence Type:
+- Suspicious KYC communication
+- Financial demand
+- Phone communication
+
+------------------------------------------------------------
+4. SUSPICIOUS INDICATORS
+------------------------------------------------------------
+
+1. Unverified threat of account blocking.
+2. Demand for immediate money transfer.
+3. Use of urgency to pressure the victim.
+4. Suspicious KYC-related communication.
+5. Possible social-engineering behaviour.
+
+------------------------------------------------------------
+5. CRIME PATTERN
+------------------------------------------------------------
+
+Detected Pattern:
+Social Engineering / Online Financial Fraud
+
+The communication appears to use urgency and the threat
+of account blocking to pressure the victim into making
+a financial transaction.
+
+------------------------------------------------------------
+6. INVESTIGATION OBSERVATIONS
+------------------------------------------------------------
+
+The evidence indicates a possible attempt to manipulate
+the victim into transferring money by creating urgency
+around account verification/KYC.
+
+The available evidence should be preserved in its original
+form for further investigation.
+
+------------------------------------------------------------
+7. EVIDENCE PRESERVATION
+------------------------------------------------------------
+
+Recommended evidence to preserve:
+
+- Original screenshots
+- Original audio recording
+- Extracted OCR text
+- Audio transcript
+- Phone numbers
+- Transaction/payment details
+- Relevant dates and timestamps
+- AI-generated analysis
+
+------------------------------------------------------------
+8. CONCLUSION
+------------------------------------------------------------
+
+Based on the currently analyzed evidence, the case shows
+indicators consistent with a possible online financial
+fraud/social-engineering attempt.
+
+This report is an AI-assisted investigation summary and
+should not be treated as a final legal determination.
+
+============================================================
+                    END OF REPORT
+============================================================
+"""
+
+    return report
+
+
+if __name__ == "__main__":
+
+    final_report = generate_report()
+
+    print(final_report)
+
+    with open("investigation_report.txt", "w", encoding="utf-8") as file:
+        file.write(final_report)
+
+    print("\nReport saved successfully as investigation_report.txt")
